@@ -41,7 +41,7 @@ pipeline {
                 docker stop project || true
                 docker rm project || true
                 # Run app on container port 8080 but expose as 8090 on host
-                docker run -d --name project -p 8090:8080 $DOCKER_IMAGE
+                docker run -d --name project -p 8090:8090 $DOCKER_IMAGE
                 '''
             }
         }
